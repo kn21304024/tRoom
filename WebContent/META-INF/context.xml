@@ -1,0 +1,11 @@
+<Context reloadable="true">
+<Resource
+name="jdbc/sql"
+auth="Container"
+type="javax.sql.DataSource"
+driverClassName="oracle.jdbc.driver.OracleDriver"
+url="jdbc:oracle:thin:@localhost:1521:orcl"
+username="info"
+password="pro"
+/>
+</Context>

@@ -1,0 +1,39 @@
+/*共通部分*/
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+		"ヒラギノ角ゴ Pro W3", sans-serif;
+	line-height: 1.7;
+}
+
+#form{
+    width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #555;
+    }
+<!--ログイン画面-->
+form p{
+    font-size: 14px;
+    }
+
+.form-title{
+    text-align: center;
+    }
+
+.mail,.pass{
+    margin-bottom: 20px;
+    }
+input[type="text"],
+input[type="password"] {
+    width: 300px;
+    padding: 4px;
+    font-size: 14px;
+    }
+.submit{
+    text-align: right;
+    }
+

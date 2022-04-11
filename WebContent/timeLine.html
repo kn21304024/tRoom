@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="t-card.css">
+
+    <title>T-Room</title>
+
+
+    <style
+    data-href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+  >
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Me5g.woff)
+        format("woff");
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9vAA.woff)
+        format("woff");
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlvAA.woff)
+        format("woff");
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2)
+        format("woff2");
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+        U+A640-A69F, U+FE2E-FE2F;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2)
+        format("woff2");
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2)
+        format("woff2");
+      unicode-range: U+1F00-1FFF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2)
+        format("woff2");
+      unicode-range: U+0370-03FF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2)
+        format("woff2");
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+        U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2)
+        format("woff2");
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+        U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2)
+        format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+        U+A640-A69F, U+FE2E-FE2F;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+1F00-1FFF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0370-03FF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+        U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+        U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2)
+        format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+        U+A640-A69F, U+FE2E-FE2F;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+1F00-1FFF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0370-03FF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+        U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2)
+        format("woff2");
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+        U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2)
+        format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    body a.hover-me {
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #423636;
+  font-family: sans-serif;
+  border-radius: 2px;
+  position: absolute;
+  top: calc(50% + 5px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s linear;
+  font-size: 18px;
+}
+body a.hover-me:hover {
+  background: #ececec;
+}
+body a.hover-me:hover + .expressions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+}
+body a.hover-me:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #909090;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+body a.hover-me:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #909090;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+body .expressions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+  border-radius: 100px;
+  position: absolute;
+  top: calc(50% - 40px);
+  width: 350px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  left: 50%;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 0 2px #0000004f;
+  transform: translate(-50%, -50%);
+}
+body .expressions:hover {
+  display: grid;
+}
+body .expressions .emoji {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transition: all 0.1s linear;
+  border-radius: 100%;
+}
+body .expressions .emoji .emoji-title {
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  background: #00000099;
+  border-radius: 100px;
+  padding: 1px 4px;
+  font-weight: 500;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+}
+body .expressions .emoji > div:hover + .emoji-title {
+  opacity: 1;
+}
+body .expressions .emoji:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+body .expressions .emoji.face-normal-color {
+  background: #ffeb70;
+  box-shadow: inset 0 -15px 20px #bb5f008c;
+}
+body .expressions .emoji.face-angry-color {
+  background: #f57525;
+  box-shadow: inset 0 -15px 20px #c14700;
+}
+body .expressions .emoji.like-color {
+  background: #32a2fe;
+  box-shadow: inset 0 -15px 20px #001229ba;
+}
+body .expressions .emoji.heart-color {
+  background: #fd5f7d;
+  box-shadow: inset 0 -15px 20px #e200009e;
+}
+body .expressions .emoji .like-emoji {
+  width: 100%;
+  height: 100%;
+  animation: thumbs-shake 2s infinite;
+}
+body .expressions .emoji .like-emoji i.fa-thumbs-up {
+  color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .expressions .emoji .heart-emoji {
+  width: 100%;
+  height: 100%;
+  animation: heart-shake 3s infinite;
+  position: absolute;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+body .expressions .emoji .heart-emoji .heart {
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  transform: rotate(45deg) translate(-50%, -50%);
+  top: 62%;
+  left: 35%;
+  border-bottom-right-radius: 2px;
+}
+body .expressions .emoji .heart-emoji .heart:before {
+  content: "";
+  background: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: -50%;
+  left: 0;
+}
+body .expressions .emoji .heart-emoji .heart:after {
+  content: "";
+  background: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: -50%;
+}
+body .expressions .emoji .care-emoji .emoji-head {
+  width: 100%;
+  height: 100%;
+  animation: care-shake 4.5s infinite;
+  position: absolute;
+}
+body .expressions .emoji .care-emoji .emoji-head .eyes {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 16px;
+  animation: care-eye 4.5s infinite;
+}
+body .expressions .emoji .care-emoji .emoji-head .eyes .eye {
+  background: #353d63;
+  width: 5px;
+  border-radius: 100%;
+  position: relative;
+}
+body .expressions .emoji .care-emoji .emoji-head .eyes .eye:after {
+  content: "";
+  width: 0;
+  height: 0;
+  box-shadow: 0 0 3px 2px #ffffff33;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+body .expressions .emoji .care-emoji .emoji-head .eyes .eye.eye-left:before {
+  content: "";
+  background: #dc7b00;
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  top: -6px;
+  left: -3px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 2px;
+  transform: rotate(-10deg);
+}
+body .expressions .emoji .care-emoji .emoji-head .eyes .eye.eye-right:before {
+  content: "";
+  background: #dc7b00;
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 2px;
+  transform: rotate(10deg);
+}
+body .expressions .emoji .care-emoji .emoji-head .mouth {
+  position: absolute;
+  width: 9px;
+  height: 2px;
+  background: #77330f;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, 0);
+}
+body .expressions .emoji .care-emoji .heart {
+  background: #ef2d3c;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  transform: rotate(60deg) translate(-50%, -50%);
+  border-bottom-right-radius: 2px;
+  animation: care-heart 4.5s infinite;
+}
+body .expressions .emoji .care-emoji .heart:before {
+  content: "";
+  background: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: -50%;
+  left: 0;
+}
+body .expressions .emoji .care-emoji .heart:after {
+  content: "";
+  background: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: -50%;
+}
+body .expressions .emoji .care-emoji .arms {
+  position: absolute;
+  display: inline-flex;
+  justify-content: space-evenly;
+  top: 18px;
+  box-shadow: 0 0 7px #00000030;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+body .expressions .emoji .care-emoji .arms .arm {
+  height: 8px;
+  border-color: #fbc962;
+  border-style: solid;
+  border-radius: 92px;
+  position: absolute;
+}
+body .expressions .emoji .care-emoji .arms .arm.arm-left {
+  transform-origin: top left;
+  left: -15px;
+  animation: care-arm-left 4.5s infinite;
+}
+body .expressions .emoji .care-emoji .arms .arm.arm-right {
+  transform-origin: top right;
+  right: -15px;
+  animation: care-arm-right 4.5s infinite;
+}
+body .expressions .emoji .haha-emoji {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: haha-shake 3s infinite;
+}
+body .expressions .emoji .haha-emoji .eye {
+  background: #30375b;
+  width: 8px;
+  height: 2px;
+  border-radius: 100px;
+  transform: rotate(30deg);
+  box-shadow: 15px -5px 0 0 #30375b;
+  position: absolute;
+  left: 9px;
+  top: 10px;
+}
+body .expressions .emoji .haha-emoji .eye:before {
+  background: #30375b;
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  border-radius: 100px;
+  transform: rotate(-60deg);
+  box-shadow: 15px 5px 0 0 #30375b;
+  right: -1px;
+  top: 3px;
+}
+body .expressions .emoji .haha-emoji .mouth {
+  background: #5a2912;
+  width: 20px;
+  height: 12px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  animation: haha-mouth 0.3s infinite;
+}
+body .expressions .emoji .haha-emoji .mouth:before {
+  content: "";
+  position: absolute;
+  background: #dd254b;
+  width: 100%;
+  height: 10px;
+  border-radius: 100%;
+  margin-top: 5px;
+}
+body .expressions .emoji .amazing-emoji {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: amazing-shake 5s infinite;
+}
+body .expressions .emoji .amazing-emoji .eyebrows {
+  display: inline-flex;
+  width: 100%;
+  height: 10px;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 5px;
+  left: -4px;
+}
+body .expressions .emoji .amazing-emoji .eyebrows .eyebrow {
+  background: #dc7b00;
+  height: 2px;
+  width: 2px;
+  border-radius: 100%;
+  box-shadow: 1px -1px 0 #dc7b00, 2px -1px 0 #dc7b00, 3px -2px 0 #dc7b00, 4px -2px 0 #dc7b00, 5px -2px 0 #dc7b00, 6px -1px 0 #dc7b00, 7px -1px 0 #dc7b00, 8px 0px 0 #dc7b00;
+}
+body .expressions .emoji .amazing-emoji .eyes {
+  display: inline-flex;
+  width: 100%;
+  height: 10px;
+  justify-content: space-evenly;
+}
+body .expressions .emoji .amazing-emoji .eyes .eye {
+  background: #353d63;
+  width: 6px;
+  height: 100%;
+  border-radius: 100%;
+  animation: amazing-eye 5s infinite;
+  position: relative;
+}
+body .expressions .emoji .amazing-emoji .eyes .eye:after {
+  content: "";
+  width: 0;
+  height: 0;
+  box-shadow: 0 0 3px 2px #ffffff33;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+body .expressions .emoji .amazing-emoji .mouth {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #77330f;
+  border-radius: 45%;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, 0);
+  animation: amazing-mouth 5s infinite;
+}
+body .expressions .emoji .sad-emoji {
+  width: 100%;
+  height: 100%;
+  animation: sad-shake 4.5s infinite;
+  position: absolute;
+}
+body .expressions .emoji .sad-emoji .eyes {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 16px;
+}
+body .expressions .emoji .sad-emoji .eyes .tear {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #2db5f7;
+  transform: rotate(45deg);
+  border-radius: 100%;
+  border-top-left-radius: 0;
+  z-index: 2;
+  animation: sad-tear 4.5s infinite;
+}
+body .expressions .emoji .sad-emoji .eyes .eye {
+  background: #353d63;
+  width: 5px;
+  border-radius: 100%;
+  position: relative;
+  animation: sad-eye 4.5s infinite;
+}
+body .expressions .emoji .sad-emoji .eyes .eye:after {
+  content: "";
+  width: 0;
+  height: 0;
+  box-shadow: 0 0 3px 2px #ffffff33;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+body .expressions .emoji .sad-emoji .eyes .eye.eye-left:before {
+  content: "";
+  background: #dc7b00;
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  top: -6px;
+  left: -3px;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 2px;
+  transform: rotate(-25deg);
+}
+body .expressions .emoji .sad-emoji .eyes .eye.eye-right:before {
+  content: "";
+  background: #dc7b00;
+  width: 9px;
+  height: 2px;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 2px;
+  transform: rotate(25deg);
+}
+body .expressions .emoji .sad-emoji .mouth {
+  position: absolute;
+  width: 9px;
+  height: 4px;
+  background: #77330f;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  left: 50%;
+  bottom: 7px;
+  transform: translate(-50%, 0);
+}
+body .expressions .emoji .sad-emoji .mouth:before {
+  content: "";
+  background: #77330f;
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  border-top-left-radius: 100%;
+  transform: rotate(-15deg);
+  top: 1px;
+  left: -4px;
+}
+body .expressions .emoji .sad-emoji .mouth:after {
+  content: "";
+  background: #77330f;
+  position: absolute;
+  width: 7px;
+  height: 3px;
+  border-top-right-radius: 100%;
+  transform: rotate(15deg);
+  top: 1px;
+  right: -4px;
+}
+body .expressions .emoji .angry-emoji {
+  width: 100%;
+  height: 100%;
+  animation: angry-shake 4.5s infinite;
+  position: absolute;
+}
+body .expressions .emoji .angry-emoji .eyebrows {
+  width: 100%;
+  position: absolute;
+  animation: angry-eyebrow 4.5s infinite;
+}
+body .expressions .emoji .angry-emoji .eyebrows .eyebrow.eyebrow-left:before {
+  content: "";
+  background: #c04602;
+  width: 11px;
+  height: 2px;
+  position: absolute;
+  top: -4px;
+  left: 7px;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 2px;
+  transform: rotate(30deg);
+}
+body .expressions .emoji .angry-emoji .eyebrows .eyebrow.eyebrow-left:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  background: #c04602;
+  border-top-left-radius: 100%;
+  top: -4px;
+  left: 16px;
+  border-bottom-right-radius: 2px;
+}
+body .expressions .emoji .angry-emoji .eyebrows .eyebrow.eyebrow-right:before {
+  content: "";
+  background: #c04602;
+  width: 11px;
+  height: 2px;
+  position: absolute;
+  top: -4px;
+  right: 7px;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 2px;
+  transform: rotate(-30deg);
+}
+body .expressions .emoji .angry-emoji .eyebrows .eyebrow.eyebrow-right:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  background: #c04602;
+  border-top-right-radius: 100%;
+  top: -4px;
+  right: 16px;
+  border-bottom-left-radius: 2px;
+}
+body .expressions .emoji .angry-emoji .eyes {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 12px;
+}
+body .expressions .emoji .angry-emoji .eyes .eye {
+  background: #353d63;
+  width: 6px;
+  height: 8px;
+  border-radius: 100%;
+}
+body .expressions .emoji .angry-emoji .mouth {
+  position: absolute;
+  background: #77330f;
+  left: 50%;
+  top: 23px;
+  transform: translate(-50%, 0);
+  animation: angry-mouth 4.5s infinite;
+}
+
+@keyframes thumbs-shake {
+  5% {
+    transform: rotate(15deg);
+  }
+  45% {
+    transform: rotate(-25deg) scale(1.25);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  55% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes heart-shake {
+  0% {
+    transform: rotate(0deg) scale(1);
+    top: 0;
+  }
+  10% {
+    transform: rotate(15deg) scale(0.8);
+    top: 10%;
+  }
+  20% {
+    transform: rotate(-15deg) scale(1.5);
+    top: -5%;
+  }
+  30% {
+    transform: rotate(7deg) scale(1.2);
+    top: -2%;
+  }
+  35% {
+    transform: rotate(0deg) scale(1);
+    top: 0;
+  }
+}
+@keyframes care-shake {
+  0% {
+    transform: perspective(80px) rotateX(30deg) rotateY(-20deg) rotate(-10deg);
+    top: -8px;
+    left: -3px;
+  }
+  20% {
+    transform: perspective(80px) rotateX(15deg) rotateY(-20deg) rotate(0deg);
+    top: -6px;
+    left: -3px;
+  }
+  30% {
+    transform: perspective(80px) rotateX(30deg) rotateY(0deg) rotate(0deg);
+    top: -8px;
+    left: 0;
+  }
+  65% {
+    transform: perspective(80px) rotateX(30deg) rotateY(0deg) rotate(-10deg);
+    top: -5px;
+    left: 0;
+  }
+  100% {
+    transform: perspective(80px) rotateX(30deg) rotateY(-20deg) rotate(-10deg);
+    top: -8px;
+    left: -3px;
+  }
+}
+@keyframes care-eye {
+  0% {
+    height: 2px;
+  }
+  30% {
+    height: 2px;
+  }
+  35% {
+    height: 7px;
+  }
+  65% {
+    height: 7px;
+  }
+  100% {
+    height: 2px;
+  }
+}
+@keyframes care-heart {
+  0% {
+    top: 80%;
+    left: 10%;
+  }
+  5% {
+    top: 80%;
+    left: 10%;
+  }
+  35% {
+    top: 90%;
+    left: 10%;
+  }
+  65% {
+    top: 90%;
+    left: 10%;
+  }
+  100% {
+    top: 80%;
+    left: 10%;
+  }
+}
+@keyframes care-arm-left {
+  0% {
+    transform: rotate(30deg);
+    width: 22px;
+    border-width: 0 22px 0 0;
+  }
+  5% {
+    transform: rotate(30deg);
+    width: 22px;
+    border-width: 0 22px 0 0;
+  }
+  35% {
+    transform: rotate(55deg);
+    width: 20px;
+    border-width: 0 20px 0 0;
+  }
+  65% {
+    transform: rotate(55deg);
+    width: 20px;
+    border-width: 0 20px 0 0;
+  }
+  100% {
+    transform: rotate(30deg);
+    width: 22px;
+    border-width: 0 22px 0 0;
+  }
+}
+@keyframes care-arm-right {
+  0% {
+    transform: rotate(-30deg);
+    width: 22px;
+    border-width: 0 22px 0 0;
+  }
+  5% {
+    transform: rotate(-30deg);
+    width: 22px;
+    border-width: 0 22px 0 0;
+  }
+  35% {
+    transform: rotate(-55deg);
+    width: 27px;
+    border-width: 0 27px 0 0;
+  }
+  65% {
+    transform: rotate(-55deg);
+    width: 27px;
+    border-width: 0 27px 0 0;
+  }
+  100% {
+    transform: rotate(-30deg);
+    width: 22px;
+    border-width: 0 22px 0 0;
+  }
+}
+@keyframes haha-shake {
+  0% {
+    transform: perspective(80px) rotateY(-30deg) rotate(-10deg);
+    left: -3px;
+    top: 0;
+  }
+  5% {
+    top: -3px;
+  }
+  10% {
+    top: 0;
+  }
+  15% {
+    top: -3px;
+  }
+  20% {
+    top: 0;
+  }
+  25% {
+    top: -3px;
+  }
+  30% {
+    top: 0;
+  }
+  35% {
+    top: -3px;
+  }
+  40% {
+    top: 0;
+  }
+  45% {
+    top: 0;
+  }
+  50% {
+    transform: perspective(80px) rotateY(30deg) rotate(10deg);
+    left: 6px;
+    top: 3px;
+  }
+  55% {
+    top: 6px;
+  }
+  60% {
+    top: 3px;
+  }
+  65% {
+    top: 6px;
+  }
+  70% {
+    top: 3px;
+  }
+  75% {
+    top: 6px;
+  }
+  80% {
+    top: 3px;
+  }
+  85% {
+    top: 6px;
+  }
+  90% {
+    top: 3px;
+  }
+  95% {
+    top: 0;
+  }
+  100% {
+    transform: perspective(80px) rotateY(-30deg) rotate(-10deg);
+    left: -3px;
+    top: 0;
+  }
+}
+@keyframes haha-mouth {
+  0% {
+    width: 20px;
+    height: 12px;
+  }
+  50% {
+    width: 21px;
+    height: 13px;
+  }
+  100% {
+    width: 20px;
+    height: 12px;
+  }
+}
+@keyframes amazing-shake {
+  0% {
+    transform: perspective(80px) rotateY(0) rotateX(30deg);
+    top: -6px;
+  }
+  15% {
+    top: -6px;
+    left: 0;
+    transform: perspective(80px) rotateY(0) rotateX(30deg) rotate(0deg);
+  }
+  35% {
+    top: 0;
+    left: 6px;
+    transform: perspective(80px) rotateY(30deg) rotate(-5deg);
+  }
+  50% {
+    left: -6px;
+    transform: perspective(80px) rotateY(-30deg) rotate(15deg);
+  }
+  85% {
+    left: 0;
+    top: 0;
+    transform: perspective(80px) rotateY(0deg);
+  }
+  100% {
+    top: -6px;
+    transform: perspective(80px) rotateY(0) rotateX(30deg);
+  }
+}
+@keyframes amazing-mouth {
+  0% {
+    width: 5px;
+    height: 5px;
+  }
+  5% {
+    width: 10px;
+    height: 16px;
+  }
+  35% {
+    width: 10px;
+    height: 16px;
+  }
+  50% {
+    width: 5px;
+    height: 5px;
+  }
+  85% {
+    width: 10px;
+    height: 16px;
+  }
+  95% {
+    width: 10px;
+    height: 16px;
+  }
+  100% {
+    width: 5px;
+    height: 5px;
+  }
+}
+@keyframes amazing-eye {
+  0% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  2% {
+    margin-top: 0;
+    height: 0;
+  }
+  4% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  6% {
+    margin-top: 0;
+    height: 0;
+  }
+  8% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  35% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  37% {
+    margin-top: 0;
+    height: 0;
+  }
+  39% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  50% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  52% {
+    margin-top: 0;
+    height: 0;
+  }
+  54% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  75% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  77% {
+    margin-top: 0;
+    height: 0;
+  }
+  79% {
+    margin-top: 10px;
+    height: 100%;
+  }
+  100% {
+    margin-top: 10px;
+    height: 100%;
+  }
+}
+@keyframes sad-shake {
+  0% {
+    transform: perspective(80px) rotateY(-30deg) rotateX(5deg);
+    top: -2px;
+    left: -5px;
+  }
+  10% {
+    transform: perspective(80px) rotateY(0) rotateX(0);
+    top: 0;
+    left: 0;
+  }
+  40% {
+    transform: perspective(80px) rotateY(0) rotateX(0);
+    top: 0;
+    left: 0;
+  }
+  60% {
+    transform: perspective(80px) rotateY(30deg) rotateX(-20deg);
+    top: 4px;
+    left: 5px;
+  }
+  75% {
+    transform: perspective(80px) rotateY(30deg) rotateX(-20deg);
+    top: 4px;
+    left: 5px;
+  }
+  90% {
+    transform: perspective(80px) rotateY(-30deg) rotateX(5deg);
+    top: -2px;
+    left: -5px;
+  }
+  100% {
+    transform: perspective(80px) rotateY(-30deg) rotateX(5deg);
+    top: -2px;
+    left: -5px;
+  }
+}
+@keyframes sad-eye {
+  0% {
+    height: 7px;
+  }
+  40% {
+    height: 7px;
+  }
+  60% {
+    height: 3px;
+  }
+  75% {
+    height: 3px;
+  }
+  90% {
+    height: 7px;
+  }
+  100% {
+    height: 7px;
+  }
+}
+@keyframes sad-tear {
+  0% {
+    top: 8px;
+    opacity: 1;
+    right: 4px;
+    transform: rotate(45deg) scale(0.2);
+  }
+  10% {
+    top: 8px;
+    opacity: 1;
+    right: 4px;
+    transform: rotate(45deg) scale(1);
+  }
+  40% {
+    top: 8px;
+    opacity: 1;
+    right: 4px;
+    transform: rotate(45deg) scale(1);
+  }
+  60% {
+    top: 20px;
+    opacity: 0;
+    right: 4px;
+    transform: rotate(45deg) scale(0.2);
+  }
+  70% {
+    opacity: 0;
+    right: 30px;
+    top: 8px;
+    transform: rotate(45deg) scale(0.2);
+  }
+  71% {
+    opacity: 1;
+    right: 30px;
+    top: 8px;
+    transform: rotate(45deg) scale(0.2);
+  }
+  75% {
+    opacity: 1;
+    right: 30px;
+    top: 8px;
+    transform: rotate(45deg) scale(1);
+  }
+  90% {
+    opacity: 1;
+    right: 30px;
+    top: 20px;
+    transform: rotate(45deg) scale(0.2);
+  }
+  99% {
+    top: 8px;
+    opacity: 0;
+    right: 30px;
+    transform: rotate(45deg) scale(0.2);
+  }
+  100% {
+    top: 8px;
+    opacity: 1;
+    right: 4px;
+    transform: rotate(45deg) scale(0.2);
+  }
+}
+@keyframes angry-shake {
+  0% {
+    left: 0;
+    top: 7px;
+  }
+  10% {
+    top: 0;
+  }
+  20% {
+    top: 0;
+  }
+  22% {
+    top: -3px;
+  }
+  25% {
+    top: 7px;
+    left: 0;
+    transform: rotate(0);
+  }
+  30% {
+    left: 3px;
+    transform: rotate(-10deg);
+  }
+  32% {
+    left: -3px;
+    transform: rotate(10deg);
+  }
+  34% {
+    left: 3px;
+    transform: rotate(-10deg);
+  }
+  36% {
+    left: -3px;
+    transform: rotate(10deg);
+  }
+  38% {
+    left: 3px;
+    transform: rotate(-10deg);
+  }
+  40% {
+    left: -3px;
+    transform: rotate(10deg);
+  }
+  42% {
+    left: 0;
+    transform: rotate(0);
+  }
+  100% {
+    top: 7px;
+    left: 0;
+  }
+}
+@keyframes angry-eyebrow {
+  0% {
+    top: 15px;
+  }
+  10% {
+    top: 10px;
+  }
+  20% {
+    top: 10px;
+  }
+  25% {
+    top: 15px;
+  }
+  100% {
+    top: 15px;
+  }
+}
+@keyframes angry-mouth {
+  0% {
+    width: 12px;
+    height: 3px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+  10% {
+    width: 8px;
+    height: 10px;
+    border-radius: 45%;
+  }
+  20% {
+    width: 8px;
+    height: 10px;
+    border-radius: 45%;
+  }
+  25% {
+    width: 12px;
+    height: 3px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+  100% {
+    width: 12px;
+    height: 3px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+}
+  </style>
+
+
+      <title>T-Room</title>
+
+    </head>
+
+
+
+    <body id="element">
+      <div id="__next" data-reactroot="">
+        <div class="bxef95-0 nnDdP">
+          <div class="dz5d85-0 jrWrwC">
+            <div class="dz5d85-1 nhmUi">
+              <a title="T-Room" class="dqjqtp-0 dKAVTI" href="timeLine.html"
+                ><img
+                  class="sc-139xjgq-0 dmPsjJ"
+                  src="img/t-rrom.jpg"
+                  alt="T-Room"
+              /></a>
+
+
+
+              <div class="bxef95-1 jUIPQC">
+                <div class="dj0ioy-0 erGtSy">
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <!-- ---navigation -->
+
+            <div role="navigation" class="dz5d85-2 gnuDax">
+              <a
+                class="jjui6k-0 fvcpqW sc-1ahzbiw-0 jlYVsX"
+                role="button"
+                href="./post/addpost-input.jsp"
+                ><span class="jjui6k-1 itqUZn">新規投稿</span></a
+              >
+
+
+
+              <div class="e14l7i-4 izBXoV">
+               <form action="Logout" method="get">
+                <input type="submit" value="ログアウト"
+                class="sc-pwv2fp e14l7i-5 gsyAzE hmKMXM">
+                  <div class="sc-wtfuxu duzRtV"></div>
+                </form>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="bvk29r-0 eFPEdc">
+          <div class="bvk29r-1 ktUcsV">
+            <div class="sc-1bfxmuy-0 eskULo">
+              <!-- <a href="/forum/all"
+                ><div class="sc-11gkikh-0 bemouG">
+                  <div class="sc-1bfxmuy-1 hLeeSZ">
+                    <svg
+                      viewBox="0 0 24 24"
+                      focusable="false"
+                      role="img"
+                      aria-hidden="true"
+                      class="sc-husrwi kZacXU"
+                    >
+                      <path
+                        d="M18.95 3H5.05A2.04 2.04 0 003 5.04v13.91A2.04 2.04 0 005.05 21h13.9A2.05 2.05 0 0021 18.96V5.03A2.05 2.05 0 0018.95 3zM6.68 17.73a1.64 1.64 0 111.64-1.64 1.64 1.64 0 01-1.64 1.64zm0-4.1A1.64 1.64 0 118.32 12a1.64 1.64 0 01-1.64 1.64zm0-4.08A1.64 1.64 0 118.32 7.9a1.64 1.64 0 01-1.64 1.64zm11.86 6.77a1 1 0 01-1 1h-6.59a1 1 0 01-1-1v-.46a1 1 0 011-1h6.6a1 1 0 011 1zm0-4.1a1 1 0 01-1 1h-6.59a1 1 0 01-1-1v-.45a1 1 0 011-1h6.6a1 1 0 011 1zm0-4.08a1 1 0 01-1 1h-6.59a1 1 0 01-1-1v-.46a1 1 0 011-1h6.6a1 1 0 011 1z"
+                        data-name="icon_md_forum"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="gthja3-1 hdRUIJ">最新</div>
+                </div></a> -->
+
+
+
+
+
+              <div
+                class="sc-qz0f8b dCgfWN simplebar-scrollable-y"
+                data-simplebar="init"
+              >
+                <div class="simplebar-wrapper" style="margin: 0px">
+                  <div class="simplebar-height-auto-observer-wrapper">
+                    <div class="simplebar-height-auto-observer"></div>
+                  </div>
+                  <div class="simplebar-mask">
+                    <div class="simplebar-offset" style="right: 0px; bottom: 0px">
+                      <div
+                        class="simplebar-content-wrapper"
+                        style="height: 100%; overflow: hidden scroll"
+                      >
+                        <div class="simplebar-content" style="padding: 0px">
+                          <span></span><span></span><span></span
+                          >
+                          <span id="navigationSpan">
+                        <!-- 動的生成    -->
+                    </span>
+
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <!-- 左スクロールバー -->
+      <div
+        class="sc-bdvvtL dSvLyf simplebar-track simplebar-vertical"
+        style="visibility: visible"
+      >
+        <div
+          class="sc-1dw6i8r fbrBIY simplebar-scrollbar"
+          style="
+            height: 220px;
+            transform: translate3d(0px, 0px, 0px);
+            display: block;
+          "
+        ></div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="bvk29r-2 etVvYS">
+    <div role="main" class="sc-10tqbnq-0 dSlIAt">
+      <div class="sc-10tqbnq-1 kWPgpA">
+        <div class="d4ydwz-0 eJErMr">
+          <div class="sc-1po85zq-0 feURgy">
+
+<!-- タイムライン上部の表示 -->
+
+
+            <div class="sc-1iit2li-0 sc-1iit2li-1 fyQnjs kxMdVU">
+                <div class="sc-1iit2li-7 imcIap">
+                  <div class="sc-1nqrhll-0 jlvQCd">
+                    <div class="sc-1nqrhll-1 dDfcLa">
+                      <div class="pkcmwm-0 jJxLRw">
+                        <a
+                          size="1"
+                          class="pkcmwm-1 kxXeqH"
+                          href="#"
+                          >タイムライン</a
+                        >
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="sc-1wisey8-0 dRDKvl" >
+
+                <div class="dzql1i-0 kPgcSM">
+                  <div class="sc-1db29sy-0 cKDgas">
+
+                <div style="padding-top: 0px; padding-bottom: 3140px" id="TimeLineMain">
+                       <!-- 動的生成    -->
+
+
+
+
+                                 <!--ここからう上が 動的生成    -->
+                    </div>
+                    <div style="display: block">
+                        <div class="sc-1ocsimk-0 dgLBdk"></div>
+                    </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<div class="__portal" id="__portal"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+    <header>
+        <div class="head-container">
+            <div class="logo">
+                <a href="./timeLine.html">T-room</a>
+            </div>
+            <div>
+                <label class="search-title" for="site-search">Search the site:</label>
+                <input class="search" type="search" id="site-search" name="q" aria-label="Search through site content">
+
+                <button class="btn">Search</button>
+            </div>
+            <div class="link">
+                <a href="./post/addpost-input.jsp">
+                    <li>new post</li>
+                </a>
+                <a href="#">
+                    <li>logout</li>
+                </a>
+            </div>
+        </div>
+        <!-- <button type="submit"><img alt="新規ボタンです" src="icon/create.svg"></button>   -->
+    <!-- </header>
+    <main>
+        <div id="container">
+            <nav id="navLeft">
+
+            </nav>
+            <main id="center"></main>
+            <aside>right</aside>
+        </div>
+    </main>
+
+    <!-- <footer>footer</footer> -->
+
+
+
+
+
+
+</body>
+<script src="timeLine.js"></script>
+
+</html>

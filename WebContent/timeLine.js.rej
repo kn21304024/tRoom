@@ -1,0 +1,10 @@
+diff a/WebContent/timeLine.js b/WebContent/timeLine.js	(rejected hunks)
+@@ -391,7 +391,7 @@
+ 
+ 
+ 
+-    
++
+ const tCard=document.createElement("div");
+ tCard.className="t-card";
+ modalInner.appendChild(tCard);

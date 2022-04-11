@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #000080;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+  margin: 10px 10px 10px 30px;
+}
+select {
+  margin: auto;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  border-radius: 4px;
+  padding: 8px 10px;
+  height: auto;
+  width: 100%;
+  resize: auto;
+  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(255, 255, 255);
+}
+
+/*新規投稿*/
+#addpost {
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.form-title {
+  margin: 10px 10px 10px 250px;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 1rem 0.8rem 3rem;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: #4682b4;
+  font-size: 16px;
+}
+
+.form-title:before {
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: "";
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: "";
+  border-radius: 50%;
+  background: #fff;
+}
+
+.title {
+  display: block;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  border-radius: 4px;
+  padding: 8px 10px;
+  height: auto;
+  width: 100%;
+  resize: auto;
+  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(255, 255, 255);
+}
+
+.content {
+  display: block;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  border-radius: 4px;
+  padding: 8px 10px;
+  height: 300px;
+  width: 100%;
+  resize: auto;
+  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(255, 255, 255);
+}
+
+.submit {
+  margin: 10px 10px 10px 330px;
+  --button-padding-horizontal: 1em;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  appearance: none;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  position: relative;
+  outline: none;
+  user-select: none;
+  border: none;
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  --button-padding-vertical: 11px;
+  --button-icon-size: 18px;
+  --button-font-size: 16px;
+  font-size: var(--button-font-size);
+  border-radius: 10px;
+  line-height: 22px;
+  --button-initial-background: #3397cf;
+  --button-initial-color: rgba(255, 255, 255, 1);
+  --button-hover-background: #5ab0db;
+  background: var(--button-initial-background);
+  color: var(--button-initial-color);
+}
+
+/* .submit:hover {
+	background: #cbedff;
+	color: #FFF;
+} */
+
+/*ヘッダー*/
+.nnDdP {
+  position: fixed;
+  top: 0px;
+  z-index: 11;
+  height: 48px;
+  width: 100%;
+  background: rgb(0, 106, 166);
+}
+.jrWrwC {
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+  padding: 0px 20px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.nhmUi {
+  height: 100%;
+  flex: 1 1 0%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px 16px;
+}
+.dKAVTI {
+  height: 100%;
+  padding: 10px 0px;
+  display: block;
+}
+.dmPsjJ {
+  display: block;
+  margin-top:10px;
+  height: 60%;
+}
+.jUIPQC {
+  padding: 0px 32px;
+  max-width: 666px;
+  min-width: 200px;
+  height: 30px;
+  display: flex;
+  flex: 1 1 0%;
+}
+.erGtSy {
+  display: flex;
+  width: 100%;
+}
+.erGtSy form {
+  display: flex;
+  background: rgb(0, 88, 138);
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+.iRTMNa {
+  flex: 1 1 0%;
+  border: none;
+  background: none;
+  outline: none;
+  height: 100%;
+  padding: 0px 8px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+.iRTMNa::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+.iRTMNa::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+.kZacXU {
+  fill: rgb(225, 225, 225);
+  stroke: none;
+  transition: fill 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  object-fit: cover;
+  display: inline-block;
+}
