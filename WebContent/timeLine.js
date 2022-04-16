@@ -782,7 +782,7 @@ window.addEventListener("load", async function () {
       sc1eorkjw4IDjmxJ1.id = "innerDate" + postId;
       sc1eorkjw4IDjmxJ1.innerText=document.getElementById("date"+postId).innerText;
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
       // if (def < 60000) {
       //   sc1eorkjw4IDjmxJ1.innerText =
       //    Math.floor(def / 1000) + "秒前";
@@ -796,7 +796,7 @@ window.addEventListener("load", async function () {
       //   sc1eorkjw4IDjmxJ1.innerText =
       //     "投稿日:" + year + "/" + month + "/" + newDate;
       // }
-=======
+// =======
       if (def < 60000) {
         sc1eorkjw4IDjmxJ1.innerText =
          Math.floor(def / 1000) + "秒前";
@@ -810,7 +810,7 @@ window.addEventListener("load", async function () {
         sc1eorkjw4IDjmxJ1.innerText =
           "投稿日:" + year + "/" + month + "/" + newDate;
       }
->>>>>>> 513f37cc19d41f292d7c257df21fc0a506ee08b7
+// >>>>>>> 513f37cc19d41f292d7c257df21fc0a506ee08b7
       sc1eorkjw3JJbLey.appendChild(sc1eorkjw4IDjmxJ1);
 
       const sc1eorkjw5HKSyLQ = document.createElement("div");
@@ -1066,12 +1066,12 @@ recLoad(postId,sc1chgks123deCReZ,i,x,y,z,r,flag,Rflag,Xflag,Yflag,Zflag);
 
     const timelineContent = document.createElement("span");
     timelineContent.className = "content";
-<<<<<<< HEAD
-    if(content==null){timelineContent.innerText ="";}else{ timelineContent.innerText = escapeHtml(content);}
+// <<<<<<< HEAD
+//     if(content==null){timelineContent.innerText ="";}else{ timelineContent.innerText = escapeHtml(content);}
    
-=======
+// =======
     if(content!=null){timelineContent.innerText = escapeHtml(content);}else{timelineContent.innerText = "";}
->>>>>>> 513f37cc19d41f292d7c257df21fc0a506ee08b7
+// >>>>>>> 513f37cc19d41f292d7c257df21fc0a506ee08b7
     tgn9uw4PmuXC.appendChild(timelineContent);
 
  // --------------------
@@ -2634,10 +2634,10 @@ recLoad(postId,sc1chgks123deCReZ,i,x,y,z,r,flag,Rflag,Xflag,Yflag,Zflag);
       const timelineContent = document.createElement("span");
       timelineContent.className = "content";
       if(content!=null){timelineContent.innerText = escapeHtml(content);}else{timelineContent.innerText = "";}
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
       
->>>>>>> 513f37cc19d41f292d7c257df21fc0a506ee08b7
+// >>>>>>> 513f37cc19d41f292d7c257df21fc0a506ee08b7
       tgn9uw4PmuXC.appendChild(timelineContent);
       // --------------------
 
